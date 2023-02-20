@@ -1,0 +1,1 @@
+Pokrocile programovaci techniky

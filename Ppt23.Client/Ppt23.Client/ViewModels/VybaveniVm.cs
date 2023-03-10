@@ -1,4 +1,4 @@
-﻿namespace firstProgBlazor.ViewModels
+﻿namespace Ppt23.Client.ViewModels
 {
 
     public class VybaveniVm
@@ -17,7 +17,7 @@
             this.LastRevisionDateTime = LastRevisionDateTime;
         }
 
-        public static List<VybaveniVm> VratRandSeznam(int pocet)
+        public static List<VybaveniVm> VratRandSeznam()
         {
             List<VybaveniVm> list = new List<VybaveniVm>();
             int size = Random.Shared.Next(4, 20);

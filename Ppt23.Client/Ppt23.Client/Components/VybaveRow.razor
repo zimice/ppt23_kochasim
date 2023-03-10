@@ -1,4 +1,4 @@
-﻿@using firstProgBlazor.ViewModels;
+﻿@using Ppt23.Client.ViewModels
 
 <div class="grid grid-cols-5 gap-4 p-2 px-1 py-1 @((Vyb.isRevisionNeeded) ? "bg-red-200" : "")">
     <div>@Vyb.Name</div>
@@ -17,4 +17,5 @@
     [Parameter] public VybaveniVm Vyb { get; set; }
     [Parameter] public EventCallback<VybaveniVm> OnDelete { get; set; }
     [Parameter] public EventCallback<VybaveniVm> OnPerformRevision { get; set; }
+
 }

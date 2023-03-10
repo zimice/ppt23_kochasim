@@ -1,17 +1,43 @@
 ﻿@page "/vybaveni"
+@using Ppt23.Client.ViewModels
+@using Ppt23.Client.Components
 
-<h3>VybaveniNemocnice</h3>
+<h1 class="text-3xl font-bold mb-4">Vybaveni Nemocnice</h1>
 
+<div class="container mx-auto bg-neutral-200 p-4 px-4 py-4">
+    <div class="text-lg font-semibold mb-2">Number of Equipment: @listEquipment?.Count</div>
+    <button class="bg-teal-700 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded mb-3" @onclick="CreateRandomEquipmentList">New List</button>
+    <div class=" bg-green-200 grid grid-cols-5 gap-2 py-1 px-2">
+        <div class="font-bold text-sm ml-2">Name</div>
+        <div class="font-bold text-sm text-center">Bought Date</div>
+        <div class="font-bold text-sm text-center">Last Revision Date</div>
+        <div class="font-bold text-sm text-center">Revision Needed</div>
+        <div></div>
+    </div>
 
- <div class="grid  grid-cols-5 gap-x-2 gap-y-1  ">
-   <div class="bg-red-400 w-full h-full text-center">Whatever</div>
-   <div class="bg-red-400 w-full h-full">smting elz</div>
-   <button class="bg-gray-500 rounded-md mx-2 my-1">Butón</button>
-     <div class="bg-red-400 w-full h-full text-center">Whatever</div>
-   <div class="bg-red-400 w-full h-full">smting elz</div>
-   <button class="bg-gray-500 rounded-md mx-2 my-1">Butón</button>
- </div>
+    @foreach (var equipment in listEquipment)
+    {
+        <div class="col-span-5">
+            <VybaveRow Vyb="@equipment" OnDelete="() => listEquipment.Remove(equipment)" OnPerformRevision="() => performRevision(equipment)" />
+        </div>
+    }
+
+</div>
 
 @code {
-    
+
+    List<VybaveniVm> listEquipment = new List<VybaveniVm>();
+
+    private void performRevision(VybaveniVm equipment)
+
+    {
+        equipment.LastRevisionDateTime = DateTime.Today;
+        equipment.isRevisionNeeded = !equipment.isRevisionNeeded;
+    }
+
+    private void CreateRandomEquipmentList()
+    {
+        listEquipment = VybaveniVm.VratRandSeznam();
+    }
+
 }

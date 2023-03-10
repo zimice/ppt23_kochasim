@@ -1,4 +1,3 @@
-
 # source: https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages
 # source: https://dev.to/madhust/how-to-publish-blazor-webassembly-application-to-github-pages-using-github-action-54h4
 
@@ -26,7 +25,7 @@ jobs:
       with:
         dotnet-version: 7.0.103 #verze
     - name: Publish with dotnet #do určené složky publikuje aplikace, v release configuraci
-      run: dotnet publish firstProgBlazor/firstProgBlazor.sln--configuration Release --output ${{env.PUBLISH_DIR}}
+      run: dotnet publish Ppt23.Client/Ppt23.Client.sln --configuration Release --output ${{env.PUBLISH_DIR}}
       # ☝️ Upravte dle názvu vašeho .sln
 
     # změní tag base v index.html from '/' na 'ppt_22' což je gh page k tomuto repu
@@ -51,3 +50,4 @@ jobs:
         #obsahuje například soubor index.html, který se použije k načtení celé stránky.
         
    
+        

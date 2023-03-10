@@ -1,0 +1,20 @@
+﻿@using firstProgBlazor.ViewModels;
+
+<div class="grid grid-cols-5 gap-4 p-2 px-1 py-1 @((Vyb.isRevisionNeeded) ? "bg-red-200" : "")">
+    <div>@Vyb.Name</div>
+    <div>@Vyb.BoughtDateTime</div>
+    <div>@Vyb.LastRevisionDateTime</div>
+    <div class="p-2 text-center">@((Vyb.isRevisionNeeded) ? "Yes" : "No")</div>
+    <div class="flex justify-center">
+        <button class="p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300" @onclick="() => OnPerformRevision.InvokeAsync(Vyb)"> Provest revizi</button>
+        <button class="p-2 pl-5 pr-5 bg-blue-500 text-gray-100 text-lg rounded-lg focus:border-4 border-blue-300" @onclick="() => OnDelete.InvokeAsync(Vyb)">smazat</button>
+    </div>
+
+</div>
+
+@code {
+
+    [Parameter] public VybaveniVm Vyb { get; set; }
+    [Parameter] public EventCallback<VybaveniVm> OnDelete { get; set; }
+    [Parameter] public EventCallback<VybaveniVm> OnPerformRevision { get; set; }
+}

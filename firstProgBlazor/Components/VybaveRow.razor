@@ -1,0 +1,15 @@
+﻿@using firstProgBlazor.ViewModels;
+<div>@Vyb.Name</div>
+<div>@Vyb.BoughtDateTime</div>
+<div>@Vyb.LastRevisionDateTime</div>
+<div>@Vyb.isRevisionNeeded</div>
+
+<div>
+    <button @onclick="() => SmazEventCallback.InvokeAsync()">smazat</button>
+</div>
+
+@code {
+
+    [Parameter] public VybaveniVm Vyb { get; set; }
+    [Parameter] public EventCallback SmazEventCallback { get; set; }
+}

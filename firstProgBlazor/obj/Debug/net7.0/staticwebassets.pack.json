@@ -1,19 +1,19 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\Simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\obj\\Debug\\net7.0\\build-gz\\YI91uGJ0.gz",
+      "Id": "C:\\Users\\Simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\obj\\Debug\\net7.0\\build-gz\\3yvl3YAB.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\Simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\wwwroot\\index.html",
+      "Id": "C:\\Users\\Simon\\Downloads\\ppt23_kochasim\\firstProgBlazor\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

@@ -2,12 +2,11 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
-  "entryAssembly": "firstProgBlazor",
+  "entryAssembly": "Ppt23.Client",
   "icuDataMode": 0,
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "firstProgBlazor.dll": "sha256-cmAB2q9KkFh4+kgfup0HJjwAnAyYVpR+CikE5MW23OM=",
       "Microsoft.AspNetCore.Components.dll": "sha256-IA2mhrEv7SdMe6DKQBZGK1VlJ\/sbE6j0DiU3n9XltGk=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-jSEc6w1lUN8bup\/iXTVCIBk1vB+bHUZ\/WLq59QvXE1g=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-VoOExk2fEE249K3Jayw1Nymq9Bc8LlKEWiOG9\/0GiNY=",
@@ -22,6 +21,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW\/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-L85W0kGe1vzXNUYnqQARFyJyU5KutJYw6dMeZkGsS6Q=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-hUxOrW0i2d4N\/3At6wRqsDMpya9fFCtdE6YcQJb8d40=",
+      "Ppt23.Client.dll": "sha256-v\/tsBVQIphDHpKYU6yASJT9SzttbCLjKE26URfrwiHI=",
       "System.Collections.Concurrent.dll": "sha256-p\/W+WSIkL9jzyEasd03baj2LYf3Kyz9kwWgFTHUm\/Ss=",
       "System.Collections.dll": "sha256-akqED2uDyJNeUiuJScGsVOFW0Uy1z3mDlLzS\/zlaFxc=",
       "System.ComponentModel.dll": "sha256-i8l1LCCL8JFSIBljON1cA2eYNziHWE21TXOhsLVQa+Y=",

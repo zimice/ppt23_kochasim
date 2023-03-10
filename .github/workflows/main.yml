@@ -31,6 +31,10 @@ jobs:
       run: sed -i 's/<base href="\/" \/>/<base href="\/ppt23_kochasim\/" \/>/g' ${{env.PUBLISH_DIR}}/wwwroot/index.html
 
       
+          # zkopíruje index.html do 404.html který je předložen, kdykoliv vstoupíme na stránku, která neexistuje
+    - name: copy index.html to 404.html
+      run: cp ${{env.PUBLISH_DIR}}/wwwroot/index.html ${{env.PUBLISH_DIR}}/wwwroot/404.html
+
     # přidá .nojekyll, čímž říká gh pages, že toto není jekkyl projekt (jinak to nedovolí soubor s podtržítkem)
     - name: Add .nojekyll file
       run: touch ${{env.PUBLISH_DIR}}/wwwroot/.nojekyll      

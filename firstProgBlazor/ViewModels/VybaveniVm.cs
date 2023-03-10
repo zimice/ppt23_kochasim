@@ -21,26 +21,13 @@
         {
             List<VybaveniVm> list = new List<VybaveniVm>();
             int size = Random.Shared.Next(4, 20);
-            var rndboughtDateTime = new DateTime(2010, 1, 1).AddDays(Random.Shared.Next(1, (DateTime.Now - new DateTime(2010, 1, 1)).Days);
+            var rndboughtDateTime = new DateTime(2010, 1, 1).AddDays(Random.Shared.Next(1, (DateTime.Now - new DateTime(2010, 1, 1)).Days));
             var rndlastRevisionDays = Random.Shared.Next(1, (DateTime.Now - rndboughtDateTime).Days);
             var rndlastRevisionDateTime = rndboughtDateTime.AddDays(rndlastRevisionDays);
-            for (int i = 0; i < size;)
-                list.Add(new VybaveniVm(Random.Shared.Next(54000, 99999).ToString(), Convert.ToBoolean(Random.Shared.Next(2)), rndboughtDateTime, rndlastRevisionDateTime);
-)
+            for (int i = 0; i < size; i++) {
+                list.Add(new VybaveniVm(Random.Shared.Next(54000, 99999).ToString(), Convert.ToBoolean(Random.Shared.Next(2)), rndboughtDateTime, rndlastRevisionDateTime));
+            }
             return list;
-        }
-        public static DateTime GetRandomDateTime(DateTime? min = null, DateTime? max = null)
-        {
-            min = min ?? new DateTime(2020, 01, 01);
-            max = max ?? new DateTime(9999, 12, 31);
-
-            var range = max.Value - min.Value;
-            var randomUpperBound = (Int32)range.TotalSeconds;
-            if (randomUpperBound <= 0)
-                randomUpperBound = Random.Shared.Next(1, Int32.MaxValue);
-
-            var randTimeSpan = TimeSpan.FromSeconds((Int64)(range.TotalSeconds - Random.Shared.Next(0, randomUpperBound)));
-            return min.Value.Add(randTimeSpan);
         }
 
     }

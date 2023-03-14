@@ -17,6 +17,8 @@
 
     @foreach (var equipment in listEquipment)
     {
+        
+        
         <div class="col-span-5">
             <VybaveRow Vyb="@equipment" OnDelete="() => listEquipment.Remove(equipment)" OnPerformRevision="() => performRevision(equipment)" />
         </div>

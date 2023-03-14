@@ -9,6 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- If you add any scoped CSS files, uncomment the following to load them
     <link href="firstProgBlazor.styles.css" rel="stylesheet" /> -->
+    <style type="text/tailwindcss">
+        @layer components {
+            .twbtn {
+                @apply py-1.5 px-4 text-center text-white hover:opacity-80 hover:text-neutral-100 rounded-md focus:ring-2 focus:ring-opacity-75 focus:outline-none;
+            }
+        }
+    </style>
 </head>
 
 <body>

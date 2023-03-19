@@ -15,7 +15,7 @@
         <div class="flex justify-center">
             <button class="twbtn bg-blue-400" @onclick="() => OnPerformRevision.InvokeAsync(Vyb)"> Provest revizi</button>
             <button class="twbtn bg-red-400" @onclick="() => OnDelete.InvokeAsync(Vyb)">Smazat</button>
-            <button @onclick="() => Vyb.isEditable= true" class="bg-amber-500 twbtn"></button>
+            <button @onclick="() => Vyb.isEditable= true" class="bg-amber-500 twbtn">✏️</button>
         </div>
 
     </div>
@@ -39,5 +39,4 @@ else
     [Parameter] public VybaveniVm Vyb { get; set; }
     [Parameter] public EventCallback<VybaveniVm> OnDelete { get; set; }
     [Parameter] public EventCallback<VybaveniVm> OnPerformRevision { get; set; }
-
 }

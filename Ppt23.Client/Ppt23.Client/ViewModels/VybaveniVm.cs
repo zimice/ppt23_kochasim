@@ -6,6 +6,8 @@
         public string Name { get; set; } = "";
         
         public bool isRevisionNeeded { get; set; }
+
+        public bool isEditable { get; set; }
         public DateTime BoughtDateTime { get; set; }
 
         public DateTime LastRevisionDateTime { get; set; }

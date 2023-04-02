@@ -22,10 +22,19 @@ app.MapGet("/vybaveni", () =>
 {
     return seznam;
 });
+app.MapGet("/vybaveni/specific", ()=>{
+    
+    return seznam[2]; 
+
+});
 
 app.MapPost("/vybaveni", (VybaveniVm prichoziModel) =>
 {
+    Guid id = Guid.NewGuid();
+    prichoziModel.Id = id;
     seznam.Insert(0, prichoziModel);
+    return id;
+
 });
 
 app.UseHttpsRedirection();

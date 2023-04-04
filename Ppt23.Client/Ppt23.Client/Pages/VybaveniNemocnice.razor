@@ -1,5 +1,4 @@
 ﻿@page "/vybaveni"
-@using Ppt23.Client.ViewModels
 @using Ppt23.Client.Components
 
 <h1 class="text-3xl font-bold mb-4">Vybaveni Nemocnice</h1>
@@ -28,9 +27,9 @@
 
 @code {
 
-    List<VybaveniVm> listEquipment = new List<VybaveniVm>();
+    List<Ppt.Shared.VybaveniVm> listEquipment = new List<Ppt.Shared.VybaveniVm>();
 
-    private void performRevision(VybaveniVm equipment)
+    private void performRevision(Ppt.Shared.VybaveniVm equipment)
 
     {
         equipment.LastRevisionDateTime = DateTime.Today;
@@ -39,7 +38,7 @@
 
     private void CreateRandomEquipmentList()
     {
-        listEquipment = VybaveniVm.VratRandSeznam();
+        listEquipment = Ppt.Shared.VybaveniVm.VratRandSeznam();
     }
 
 }

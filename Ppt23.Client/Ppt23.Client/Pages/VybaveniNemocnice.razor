@@ -1,11 +1,12 @@
 ﻿@page "/vybaveni"
 @using Ppt23.Client.Components
+@inject HttpClient Http
 
 <h1 class="text-3xl font-bold mb-4">Vybaveni Nemocnice</h1>
 
 <div class="container mx-auto bg-neutral-200 p-4 px-4 py-4">
     <div class="text-lg font-semibold mb-2">Number of Equipment: @listEquipment?.Count</div>
-    <button class="bg-teal-700 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded mb-3" @onclick="CreateRandomEquipmentList">New List</button>
+    <button class="bg-teal-700 hover:bg-teal-500 text-white font-bold py-2 px-4 rounded mb-3" @onclick="OnInitializedAsync">New List</button>
     <div class=" bg-green-200 grid grid-cols-5 gap-2 py-1 px-2">
         <div class="font-bold text-sm ml-2">Name</div>
         <div class="font-bold text-sm text-center">Bought Date</div>
@@ -27,7 +28,7 @@
 
 @code {
 
-    List<Ppt.Shared.VybaveniVm> listEquipment = new List<Ppt.Shared.VybaveniVm>();
+    List<Ppt.Shared.VybaveniVm>? listEquipment = new List<Ppt.Shared.VybaveniVm>();
 
     private void performRevision(Ppt.Shared.VybaveniVm equipment)
 
@@ -36,9 +37,10 @@
         equipment.isRevisionNeeded = !equipment.isRevisionNeeded;
     }
 
-    private void CreateRandomEquipmentList()
+
+    protected override async Task OnInitializedAsync()
     {
-        listEquipment = Ppt.Shared.VybaveniVm.VratRandSeznam();
+        listEquipment = await Http.GetFromJsonAsync<List<Ppt.Shared.VybaveniVm>>("vybaveni");
     }
 
 }

@@ -198,24 +198,18 @@
       "mscorlib.dll": "sha256-kgowZLZGyceaJo4bHvVY1kmm1GJuawa5rPO1RCfNYWc=",
       "netstandard.dll": "sha256-2\/SuexPFW8hizUgbgPcchYHfG\/zmGzzMN6ESSyefPRQ=",
       "System.Private.CoreLib.dll": "sha256-mcywrbK0VZXiOvZ4dxU1ocaPZFplCRSIPQ\/wFikcrus=",
-<<<<<<< Updated upstream:Ppt23.Client/Ppt23.Client/obj/Debug/net7.0/blazor.boot.json
-      "Ppt23.Client.dll": "sha256-mJkQo0QH8IkDhijCt\/TNSI4jcDlQZy1jLk17YL5JAIk="
-=======
-      "firstProgBlazor.dll": "sha256-Cou0CEm024HE7s9NV30kYLcTvIPIfykTRUOd6+Wyub0="
->>>>>>> Stashed changes:firstProgBlazor/obj/Debug/net7.0/blazor.boot.json
+      "Ppt.Shared.dll": "sha256-z+VjNosvNw\/1Qdk0jNReBmtg0Gz59oZwyJL0txtTYY4=",
+      "Ppt23.Client.dll": "sha256-305iRTFl3YIg6sj7D8l7WzEx6WFCSEwzn1WKcwyvDGo="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-<<<<<<< Updated upstream:Ppt23.Client/Ppt23.Client/obj/Debug/net7.0/blazor.boot.json
-      "Ppt23.Client.pdb": "sha256-SirSYtMxNvtmxYnsiAhEBBcJyywcMssl1Afy5yVd95E="
-=======
-      "firstProgBlazor.pdb": "sha256-EKF0SfXr8h\/2U\/Nwe4aJPUFdsiWTxHWGLKIoFGaJN1c="
->>>>>>> Stashed changes:firstProgBlazor/obj/Debug/net7.0/blazor.boot.json
+      "Ppt.Shared.pdb": "sha256-GzM3kaL4mih5NQ8345gTWRDxHiNZyFLJxT0RZDe4vlM=",
+      "Ppt23.Client.pdb": "sha256-f6k4SsSYtRzZM15BKaPMD+ttU\/5rVBrJ34JiztB3+NA="
     },
     "runtime": {
-      "dotnet.7.0.3.4mmzxw98lq.js": "sha256-DxGvmbtUa6hGJpk3VyMEbkPZ653qWbQkh8X4ZVM9TWM=",
+      "dotnet.7.0.3.48hf4385xj.js": "sha256-DxGvmbtUa6hGJpk3VyMEbkPZ653qWbQkh8X4ZVM9TWM=",
       "dotnet.timezones.blat": "sha256-jgK4sHqNVMYvwtJ9cbh\/rz\/+ZekC9qEBgHdG\/NsjYhw=",
       "dotnet.wasm": "sha256-DL4j2DpxtpVPYKs+s2MEt5FbF\/1BGHDewGhsBC8M7as=",
       "icudt.dat": "sha256-tO5O5YzMTVSaKBboxAqezOQL9ewmupzV2JrB5Rkc8a4=",

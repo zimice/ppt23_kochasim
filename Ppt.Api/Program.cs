@@ -1,4 +1,4 @@
-using Ppt.Shared;
+ï»¿using Ppt.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(corsOptions => corsOptions.AddDefaultPolicy(policy =>
+    policy.WithOrigins("https://localhost:1111")
+    .WithMethods("GET", "DELETE")
+    .AllowAnyHeader()
+));
+
 var app = builder.Build();
+
+app.UseCors();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -17,6 +25,23 @@ if (app.Environment.IsDevelopment())
 }
 
 List<VybaveniVm> seznam = VybaveniVm.VratRandSeznam();
+
+List<RevizeViewModel> reviz = new List<RevizeViewModel>();
+List<RevizeViewModel> revizSelect;
+for (int i = 0; i < 10; i++) {
+    reviz.Add(RevizeViewModel.generateRand());
+}
+
+app.MapGet("/revize", (String name) =>
+{
+    revizSelect = null;
+    foreach(RevizeViewModel v in reviz)
+    {
+        if (v.nazev.Contains(name))
+            revizSelect.Add(v);
+    }
+	return reviz;
+});
 
 app.MapGet("/vybaveni", () =>
 {
@@ -28,34 +53,42 @@ app.MapGet("/vybaveni/specific", ()=>{
 
 });
 
-app.MapPost("/vybaveni", (VybaveniVm prichoziModel) =>
+app.MapGet("/vybaveni/{id}", (Guid id) =>
 {
-    Guid id = Guid.NewGuid();
-    prichoziModel.Id = id;
-    seznam.Insert(0, prichoziModel);
-    return id;
-
+    VybaveniVm? en = seznam.SingleOrDefault(x => x.Id == id);
+    if (en is null)
+        return Results.NotFound("Item Not Found!");
+    return Results.Ok(en);
 });
 
 app.UseHttpsRedirection();
 
 
-app.MapDelete("/vybaveni/{Id}", (Guid Id) =>
+app.MapPut("/vybaveni", (VybaveniVm editedModel) =>
 {
-    var item = seznam.SingleOrDefault(x => x.Id == Id);
-    if (item == null)
-        return Results.NotFound("Tato položka nebyla nalezena!!");
-    seznam.Remove(item);
-    return Results.Ok();
-}
-);
 
-app.MapPut("/vybaveni/{Id}", (VybaveniVm prichoziModel) => {
-    var item = seznam.SingleOrDefault(x => x.Id == prichoziModel.Id);
+    var vybaveniVm_Entity = seznam.SingleOrDefault(x => x.Id == editedModel.Id);
+    if (vybaveniVm_Entity == null)
+        return Results.NotFound("Item Not Found!");
+    else
+    {
+        vybaveniVm_Entity.BoughtDateTime = editedModel.BoughtDateTime;
+        vybaveniVm_Entity.LastRevisionDateTime = editedModel.LastRevisionDateTime;
+        vybaveniVm_Entity.Name = editedModel.Name;
+
+        return Results.Ok();
+    }
+
+});
+
+
+app.MapDelete("/vybaveni/{id}", (Guid id) =>
+{
+    var item = seznam.SingleOrDefault(x => x.Id == id);
     if (item == null)
-        return Results.NotFound("Tato položka nebyla nalezena!!");
+        return Results.NotFound("Item Not Found!");
     seznam.Remove(item);
-    seznam.Insert(0,prichoziModel);
+
     return Results.Ok();
 
 });

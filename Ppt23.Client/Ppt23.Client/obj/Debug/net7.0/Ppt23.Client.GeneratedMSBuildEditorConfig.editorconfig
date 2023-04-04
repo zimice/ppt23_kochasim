@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/Components/VybaveRow.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWeWJhdmVSb3cucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/Pages/RevizePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmV2aXplUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/Pages/VybaveniDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVnliYXZlbmlEZXRhaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/simon/Downloads/ppt23_kochasim/Ppt23.Client/Ppt23.Client/Pages/VybaveniNemocnice.razor]

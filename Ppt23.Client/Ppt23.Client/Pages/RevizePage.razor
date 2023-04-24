@@ -21,7 +21,7 @@
 
 	List<RevizeViewModel> list;
 
-	protected override async Task hledej()
+	public override async Task hledej()
 	{
 		list = await Http.GetFromJsonAsync<List<Ppt.Shared.RevizeViewModel>>("revize");
 

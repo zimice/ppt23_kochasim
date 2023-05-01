@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dcT//NK7povgPdMVZHO1ydnpgJ9Q1tWWzzo/pGF4aHi1MHnotF7DtFzfLwV4lq9iwpL7dhvJn3zQU8F1VVK41g==",
+  "dgSpecHash": "DYGDMzHGArFFMUJsa+LeVLViMbzwbOM8+v1kMWun3F6PN3jjR238inzHyvvTBfeCxHO5U8HHav+8LrpWrnsItQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\Ppt23.Client\\Ppt23.Client\\Ppt23.Client.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,7 @@
     "C:\\Users\\simon\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\simon\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\simon\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.3\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.3.nupkg.sha512"
+    "C:\\Users\\simon\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\7.0.4\\microsoft.netcore.app.runtime.mono.browser-wasm.7.0.4.nupkg.sha512"
   ],
   "logs": []
 }

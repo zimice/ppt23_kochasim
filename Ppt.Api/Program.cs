@@ -1,4 +1,7 @@
-﻿using Ppt.Shared;
+﻿using Microsoft.EntityFrameworkCore;
+using Ppt.Api.data;
+using Ppt.Shared;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,10 +15,14 @@ builder.Services.AddCors(corsOptions => corsOptions.AddDefaultPolicy(policy =>
     .WithMethods("GET", "DELETE")
     .AllowAnyHeader()
 ));
+builder.Services.AddDbContext<PptDbContext>(opt => opt.UseSqlite("FileName=mojeDatabaze.db"));
+
 
 var app = builder.Build();
 
 app.UseCors();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

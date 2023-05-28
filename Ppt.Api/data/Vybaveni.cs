@@ -12,4 +12,6 @@ public class Vybaveni
     public int PriceCzk { get; set; }
     public DateTime BoughtDateTime { get; set; }
     public DateTime LastRevisionDateTime { get; set; }
+
+    public bool isRevisionNeeded { get; set; }
 }

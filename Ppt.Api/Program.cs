@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Ppt.Api.data;
+using Ppt.Api.Data;
 using Ppt.Shared;
+using Mapster;
+using Microsoft.Extensions.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,9 +53,10 @@ app.MapGet("/revize", (String name) =>
 	return reviz;
 });
 
-app.MapGet("/vybaveni", () =>
+app.MapGet("/vybaveni", (PptDbContext db) =>
 {
-    return seznam;
+    List<VybaveniVm> destinations = db.Vybavenis.ProjectToType<VybaveniVm>().ToList();
+    return destinations;
 });
 app.MapGet("/vybaveni/specific", ()=>{
     
@@ -100,5 +104,21 @@ app.MapDelete("/vybaveni/{id}", (Guid id) =>
 
 });
 
+app.MapPost("/vybaveni", (VybaveniVm prichoziModel, PptDbContext db) =>
+{
+    prichoziModel.Id = Guid.Empty;
+
+    Vybaveni en = new()
+    {
+        Name = prichoziModel.Name,
+        BoughtDateTime = prichoziModel.BoughtDateTime,
+        LastRevisionDateTime = prichoziModel.LastRevisionDateTime,
+        PriceCzk = prichoziModel.price
+    };
+
+    db.Vybavenis.Add(en);
+    db.SaveChanges();
+    return en.Id;
+});
 
 app.Run();

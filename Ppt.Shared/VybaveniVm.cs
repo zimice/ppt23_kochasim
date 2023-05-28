@@ -16,6 +16,8 @@
 
         public DateTime LastRevisionDateTime { get; set; }
 
+        public VybaveniVm() { } 
+
         public VybaveniVm(string Name, bool isRevisionNeeded, DateTime BoughtDateTime,DateTime LastRevisionDateTime) {
             this.Name = Name;
             this.isRevisionNeeded = isRevisionNeeded;  
@@ -37,6 +39,10 @@
             return list;
         }
 
+        public object Adapt<T>()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
     

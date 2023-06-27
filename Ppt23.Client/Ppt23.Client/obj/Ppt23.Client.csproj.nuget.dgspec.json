@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\Ppt.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -68,8 +72,12 @@
         "packagesPath": "C:\\Users\\simon\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\simon\\Downloads\\ppt23_kochasim\\Ppt23.Client\\Ppt23.Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,7 +131,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-              "version": "[7.0.4, 7.0.4]"
+              "version": "[7.0.3, 7.0.3]"
             }
           ],
           "frameworkReferences": {
@@ -131,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
